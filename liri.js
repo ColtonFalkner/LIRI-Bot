@@ -64,6 +64,9 @@ function getSongs(songName) {
 }
 
 function getMovies(movieName){
+  if (movieName === " "){
+    movieName = "Mr. Nobody"
+  }
   axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + movieName)
     .then(function(data){
       var results= `
@@ -81,9 +84,7 @@ function getMovies(movieName){
     .catch(function (error){
       console.log(error);
     })
-    if (movieName === ""){
-      movieName = "Mr. Nobody"
-    }
+   
 }
 
 function doWhatItSays(){
