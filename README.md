@@ -1,10 +1,10 @@
 # LIRI
 **LIRI** is a Language Interpretation and Recognition Interface
 
-#Overview
+# Overview
 LIRI is a command line node application that takes in search parameters and returns related data. 
 
-#How to Use
+# How to Use
 Using Node JS, input one of the following commands followed by what it is you are searching for (i.e. artist, movie, concert):
 * `concert-this`
 * `spotify-this-song`
@@ -35,18 +35,18 @@ Using Node JS, input one of the following commands followed by what it is you ar
 1. **`node liri.js concert-this '<artist/band name here>'`**
 
    * Searches the Bands in Town Artist Events API for an artist and renders the following information about each event to the terminal:
-  ```
+     ```
      * Name of the venue
 
      * Venue location
 
      * Date of the Event (using the format "MM/DD/YYYY")
-  ```
+     ```
 
 2. **`node liri.js spotify-this-song '<song name here>'`**
 
    * Displays the following information about the selected song in your terminal/bash window
-    ```
+     ```
      * Artist(s)
 
      * The song's name
