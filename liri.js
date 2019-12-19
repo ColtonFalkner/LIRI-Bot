@@ -11,7 +11,7 @@ var spotify = new Spotify(keys.spotify);
 var defaultMovie= "Mr. Nobody";
 
 var action = process.argv[2];
-var value = process.argv[3];
+var value = process.argv.slice(3).join(" ");
 
 switch (action){
     case "concert-this":
@@ -44,4 +44,21 @@ function getBands(artist){
     .catch(function (error){
       console.log(error);
     });
+}
+
+function getSongs(songName) {
+  if (songName === ""){
+    songName = "I Saw the Sign";
+  }
+
+  spotify.search({type: 'track', query: songName}, function (err, data){
+    if (err){
+      return console.log("Error occurred " + err);
+    }
+    
+    console.log("Artist(s): ", data.tracks.items[0].album.artists[0].name);
+    console.log("Song: ", process.argv.slice(3).join(" "));
+    console.log("Preview Link: ", data.tracks.items[0].preview_url);
+    console.log("Album Name: ", data.tracks.items[0].album.name);
+  });
 }
