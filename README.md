@@ -78,3 +78,6 @@ Using Node JS, input one of the following commands followed by what it is you ar
 4. **`node liri.js do-what-it-says`**
 
      * Runs `spotify-this-song` for "I Want it That Way".
+     
+#Demo
+![Demo Video](https://i.imgur.com/Es8w2Eo.gif)
