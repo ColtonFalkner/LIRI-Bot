@@ -11,7 +11,7 @@ Using Node JS, input one of the following commands followed by what it is you ar
 * `movie-this`
 * `do-what-it-says`
 
-#Tech
+# Tech
 **Visual Studio Code** - text editor
 
 **Node.js** 
@@ -79,5 +79,5 @@ Using Node JS, input one of the following commands followed by what it is you ar
 
      * Runs `spotify-this-song` for "I Want it That Way".
      
-#Demo
+# Demo
 ![Demo Video](https://i.imgur.com/Es8w2Eo.gif)
