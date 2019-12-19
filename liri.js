@@ -62,3 +62,26 @@ function getSongs(songName) {
     console.log("Album Name: ", data.tracks.items[0].album.name);
   });
 }
+
+function getMovies(movieName){
+  axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + movieName)
+    .then(function(data){
+      var results= `
+      Title of the Movie: ${data.data.Title}
+      Year Released: ${data.data.Year}
+      IMDB Rating: ${data.data.Rated}
+      Rotten Tomatoes Score: ${data.data.Ratings[1].Value}
+      Country: ${data.data.Country}
+      Language: ${data.data.Language}
+      Plot Summary: ${data.data.Plot}
+      Cast: ${data.data.Actors}
+      `;
+      console.log(results);
+    })
+    .catch(function (error){
+      console.log(error);
+    })
+    if (movieName === ""){
+      movieName = "Mr. Nobody"
+    }
+}
