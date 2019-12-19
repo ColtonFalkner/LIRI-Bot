@@ -1,12 +1,22 @@
 {
   "name": "LIRI",
   "version": "1.0.0",
-  "description": "",
-  "main": "root.js",
+  "description": "A command line application that uses multiple apis to display relevant information.",
+  "main": "liri.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColtonFalkner/LIRI-Bot.git"
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Colton Falkner",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.1.1"
+  }
 }
