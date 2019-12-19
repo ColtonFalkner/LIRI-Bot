@@ -85,3 +85,24 @@ function getMovies(movieName){
       movieName = "Mr. Nobody"
     }
 }
+
+function doWhatItSays(){
+  fs.readFile("random.txt", "utf8", function (err, data){
+    data = data.split(",");
+    var action = data[0];
+    var value = data[1];
+    switch (action) {
+      case "concert-this":
+        getBands(value)
+        break;
+      case "spotify-this-song":
+        getSongs(value)
+        break;
+      case "movie-this":
+        getMovies(value)
+        break;
+      default:
+        break;
+  }
+});
+}
